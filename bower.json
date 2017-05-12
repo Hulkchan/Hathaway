@@ -1,0 +1,21 @@
+{
+  "name": "hathaway",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Hulkchan"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Hulkchan/Hathaway",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "reset.scss": "^1.0.1"
+  }
+}

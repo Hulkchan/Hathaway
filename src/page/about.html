@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keyword" content="">
+  <meta name="description" content="">
+  <title>Hathaway</title>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lib/bootstrap/bootstrap.css">
+  <!-- endinject -->
+  <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=099cc5fcadee2ef0fe697f3d10640737"></script>
+</head>
+<body>
+  <header class="black">
+    <div class="container clearfix">
+      <div class="logo pull-left">
+        <img src="../images/logo-white.png" alt="万服网络 大数据">
+        <span>万服网络</span>
+      </div>
+      <nav class="pull-right">
+        <ul class="navleft clearfix">
+          <li><a href="/">首页</a></li>
+          <li><a>解决方案</a>
+            <ul class="navChild">
+              <li><a href="">产品运价应用解决方案</a></li>
+              <li><a href="">客运信息应用解决方案</a></li>
+              <li><a href="/page/solution3.html">客户营销数据分析解决方案</a></li>
+            </ul>
+          </li>
+          <li><a href="/page/news.html">新闻资讯</a></li>
+          <li><a href="/page/about.html">关于我们</a></li>
+          <li><a href="/page/joinus.html">加入我们</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--banner Begin-->
+  <div class="container-fluid mapWrap">
+    <div id="container" style="width:100%;height:400px;"></div>
+  </div>
+  <!--banner End-->
+  <!--aboutContainer Begin-->
+  <div class="container-fluid">
+    <div class="container about-container">
+      <div class="about-title">
+        <h2>联系我们</h2>
+        <p>CONTACT US</p>
+      </div>
+      <div class="row clearfix about-infor">
+        <div class="col-md-12">
+          <h3>万服网络服务（上海）有限公司</h3>
+        </div>
+        <div class="col-md-4">
+          <p>地址：等哈看来是打开手机活动卡刷卡电话</p>
+          <p>手机：213137912739</p>
+        </div>
+        <div class="col-md-4">
+          <p>地址：等哈看来是打开手机活动卡刷卡电话</p>
+          <p>手机：213137912739</p>
+        </div>
+        <div class="col-md-4">
+          <p>地址：等哈看来是打开手机活动卡刷卡电话</p>
+          <p>手机：213137912739</p>
+        </div>
+      </div>
+      <div class="row about-form">
+        <div class="col-md-4">
+          <input type="text" name="" value="" placeholder="姓名">
+        </div>
+        <div class="col-md-4">
+          <input type="text" name="" value="" placeholder="邮箱">
+        </div>
+        <div class="col-md-4">
+          <input type="text" name="" value="" placeholder="电话">
+        </div>
+        <div class="col-md-12 about-textareaWrap">
+          <textarea name="name" rows="8" cols="80" placeholder="内容"></textarea>
+        </div>
+        <div class="col-md-12">
+          <button type="button" name="button">提交</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--aboutContainer End-->
+  <footer>
+    <div class="container">
+      <h1>
+        <img src="/images/logo-white.png" alt="">
+        <span>万服网络服务（上海）有限公司</span>
+      </h1>
+      <div class="row">
+        <div class="col-md-6">
+          <nav>
+            <ul class="clearfix">
+              <li class="pull-left"><a href="">解决方案</a></li>
+              <li class="pull-left"><a href="">新闻资讯</a></li>
+              <li class="pull-left"><a href="">关于我们</a></li>
+              <li class="pull-left"><a href="">加入我们</a></li>
+            </ul>
+          </nav>
+          <p>
+            Copyright © 2012-2013 asia-link.cn All Right Reserved.<br />
+            沪ICP备09006938号
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="row websiteInfor">
+            <div class="col-md-6"><img src="/images/phone.png" alt=""><span>021-52687636</span></div>
+            <div class="col-md-6"><img src="/images/at.png" alt=""><span>企业邮箱 :  service@1front.cn</span></div>
+            <div class="col-md-6"><img src="/images/ie.png" alt=""><span>www.1front.com</span></div>
+            <div class="col-md-6"><img src="/images/address.png" alt=""><span>中国 .上海市 . 赢华国际2栋1110</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jq:js -->
+  <script src="../js/lib/jquery/jquery.js"></script>
+  <!-- endinject -->
+  <!-- inject:js-->
+  <script src="../js/lib/bootstrap/bootstrap.js"></script>
+  <!-- endinject -->
+  <script type="text/javascript">
+    var map = new AMap.Map('container',{
+     zoom: 16,
+     center: [121.3855,31.22122]
+    });
+    var marker = new AMap.Marker({
+        position: [121.3855,31.22122]
+    });
+    marker.setMap(map);
+  </script>
+</body>
+
+</html>
