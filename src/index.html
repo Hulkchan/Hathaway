@@ -15,13 +15,15 @@
   <header>
     <div class="container clearfix">
       <div class="logo pull-left">
-        <img src="images/logo-white.png" alt="万服网络 大数据">
-        <span>万服网络</span>
+        <a href="/">
+          <img src="../images/logo-white.png" alt="万服网络 大数据">
+          <span>万服网络</span>
+        </a>
       </div>
       <nav class="pull-right">
         <ul class="navleft clearfix">
           <li><a href="/">首页</a></li>
-          <li><a>解决方案</a>
+          <li><a class="cursor-default">解决方案</a>
             <ul class="navChild">
               <li><a href="">产品运价应用解决方案</a></li>
               <li><a href="">客运信息应用解决方案</a></li>
@@ -29,7 +31,12 @@
             </ul>
           </li>
           <li><a href="/page/news.html">新闻资讯</a></li>
-          <li><a href="/page/about.html">关于我们</a></li>
+          <li><a class="cursor-default">关于我们</a>
+            <ul class="navChild">
+              <li><a href="/page/about.html">公司简介</a></li>
+              <li><a href="/page/contact.html">联系我们</a></li>
+            </ul>
+          </li>
           <li><a href="/page/joinus.html">加入我们</a></li>
         </ul>
       </nav>
@@ -147,34 +154,43 @@
       <div class="row clearfix">
         <div class="col-md-4">
             <div class="bgcontent">
-              <img src="/images/service1-g.png" alt="">
+              <div class="imgWrap">
+                <img src="/images/service1-g.png" alt="" class="img-default">
+                <img src="/images/service1-b.png" alt="" class="img-hover">
+              </div>
               <div class="line-white"></div>
               <h4>客户营销数据分析</h4>
-              <p class="hide">基于BPM过程管理流程驱动的
+              <p>基于BPM过程管理流程驱动的
   闭环绩效考核指标监控体系</p>
-              <a href="" class="hide">查看更多</a>
+              <a href="">查看更多</a>
             </div>
             <div class="bgBlack"></div>
         </div>
         <div class="col-md-4">
             <div class="bgcontent">
-              <img src="/images/service1-g.png" alt="">
+              <div class="imgWrap">
+                <img src="/images/service2-g.png" alt="" class="img-default">
+                <img src="/images/service2-b.png" alt="" class="img-hover">
+              </div>
               <div class="line-white"></div>
-              <h4>客运信息应用</h4>
-              <p class="hide">基于BPM过程管理流程驱动的
+              <h4>客户营销数据分析</h4>
+              <p>基于BPM过程管理流程驱动的
   闭环绩效考核指标监控体系</p>
-              <a href="" class="hide">查看更多</a>
+              <a href="">查看更多</a>
             </div>
             <div class="bgBlack"></div>
         </div>
         <div class="col-md-4">
             <div class="bgcontent">
-              <img src="images/service3-g.png" alt="">
+              <div class="imgWrap">
+                <img src="/images/service3-g.png" alt="" class="img-default">
+                <img src="/images/service3-b.png" alt="" class="img-hover">
+              </div>
               <div class="line-white"></div>
-              <h4>产品运价应用</h4>
-              <p class="hide">基于BPM过程管理流程驱动的
+              <h4>客户营销数据分析</h4>
+              <p>基于BPM过程管理流程驱动的
   闭环绩效考核指标监控体系</p>
-              <a href="" class="hide">查看更多</a>
+              <a href="">查看更多</a>
             </div>
             <div class="bgBlack"></div>
         </div>
@@ -241,15 +257,7 @@
   <script src="js/index.js"></script>
   <!-- endinject -->
   <script type="text/javascript">
-    $("#service .col-md-4").hover(function(){
-      var that = $(this);
-      that.addClass('active');
-      serviceHover(that);
-    },function(){
-      var that = $(this);
-      that.removeClass('active');
-      serviceHover(that);
-    })
+
   </script>
 </body>
 

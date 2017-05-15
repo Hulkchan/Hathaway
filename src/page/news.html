@@ -15,13 +15,15 @@
   <header>
     <div class="container clearfix">
       <div class="logo pull-left">
-        <img src="../images/logo-white.png" alt="万服网络 大数据">
-        <span>万服网络</span>
+        <a href="/">
+          <img src="../images/logo-white.png" alt="万服网络 大数据">
+          <span>万服网络</span>
+        </a>
       </div>
       <nav class="pull-right">
         <ul class="navleft clearfix">
           <li><a href="/">首页</a></li>
-          <li><a>解决方案</a>
+          <li><a class="cursor-default">解决方案</a>
             <ul class="navChild">
               <li><a href="">产品运价应用解决方案</a></li>
               <li><a href="">客运信息应用解决方案</a></li>
@@ -29,7 +31,12 @@
             </ul>
           </li>
           <li><a href="/page/news.html">新闻资讯</a></li>
-          <li><a href="/page/about.html">关于我们</a></li>
+          <li><a class="cursor-default">关于我们</a>
+            <ul class="navChild">
+              <li><a href="/page/about.html">公司简介</a></li>
+              <li><a href="/page/contact.html">联系我们</a></li>
+            </ul>
+          </li>
           <li><a href="/page/joinus.html">加入我们</a></li>
         </ul>
       </nav>
@@ -163,17 +170,10 @@
     <!--pagination Begin-->
     <div class="container clearfix">
       <ul class="pagination clearfix pull-right">
+        <li class="hide">上一页</li>
         <li class="active">1</li>
         <li>2</li>
         <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
-        <li>…</li>
         <li>下一页</li>
       </ul>
     </div>
@@ -218,12 +218,41 @@
   <!-- inject:js-->
   <script src="../js/lib/bootstrap/bootstrap.js"></script>
   <!-- endinject -->
-  <script src="../js/lib/director/director.js"></script>
   <!-- inject:js-->
   <script src="../js/index.js"></script>
   <!-- endinject -->
   <script type="text/javascript">
-    eliText($(".newsText"));
+    var currentPage = 1;
+    loadNews(currentPage);
+    function paginationClick(currentPage){
+      loadNews(currentPage)
+    }
+    $(".pagination").on("click","li",function(e){
+      e.stopPropagation();
+      var index = $(this).html();
+      if(index == '下一页'){
+        index = parseInt(currentPage)+1;
+        if(index-1 == pageNumber){
+          index = pageNumber;
+        }
+      }else if(index == '上一页'){
+        index = currentPage-1;
+        if(index == 1){
+          index = 1
+        }
+      }
+      currentPage = index;
+      paginationClick(currentPage);
+      $(".pagination>li").removeClass('active');
+      $(".pagination>.num").eq(currentPage-1).addClass('active');
+      //alert(currentPage)
+      if(parseInt(currentPage)!=1){
+        $("#prev1").removeClass('hide');
+      }
+      if(parseInt(currentPage)==parseInt(pageNumber)){
+        $("#next").addClass('hide');
+      }
+    })
   </script>
 </body>
 
